@@ -15,18 +15,18 @@ export class MilkProductionService {
   }
 
   findAll() {
-    return this.milkProductionModel;
+    return this.milkProductionModel.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} milkProduction`;
+    return this.milkProductionModel.findOne({id});
   }
 
   update(id: number, updateMilkProductionDto: UpdateMilkProductionDto) {
-    return `This action updates a #${id} milkProduction`;
+    return this.milkProductionModel.updateOne({id, updateMilkProductionDto});
   }
 
   remove(id: number) {
-    return `This action removes a #${id} milkProduction`;
+    return this.milkProductionModel.deleteOne({id});
   }
 }
