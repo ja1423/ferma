@@ -17,18 +17,18 @@ export class MeatProductionService {
   }
 
   findAll() {
-    return this.findOne;
+    return this.meatProductionModel.find();
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} meatProduction`;
+    return this.meatProductionModel.findOne({id});
   }
 
   update(id: number, updateMeatProductionDto: UpdateMeatProductionDto) {
-    return `This action updates a #${id} meatProduction`;
+    return this.meatProductionModel.updateOne({id},updateMeatProductionDto);
   }
 
   remove(id: number) {
-    return `This action removes a #${id} meatProduction`;
+    return this.meatProductionModel.deleteOne({id});
   }
 }

@@ -4,9 +4,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AdminModule } from './admin/admin.module';
 import { WorkerModule } from './worker/worker.module';
 import { SpecialityModule } from './speciality/speciality.module';
-import { MeatProductionModule } from './no/meat_production/meat_production.module';
 import { MeatProductionModule } from './meat_production/meat_production.module';
 import { AnimalModule } from './animal/animal.module';
+import { FiberProductionModule } from './fiber_production/fiber_production.module';
 
 
 @Module({
@@ -17,7 +17,8 @@ import { AnimalModule } from './animal/animal.module';
     WorkerModule,
     SpecialityModule,
     MeatProductionModule,
-    AnimalModule
+    AnimalModule,
+    FiberProductionModule
   ],
   controllers: [],
   providers: [],
