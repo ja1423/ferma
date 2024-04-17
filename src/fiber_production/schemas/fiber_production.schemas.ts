@@ -21,5 +21,6 @@ export class FiberProduction {
 }
 
 
+
 export const FiberProductionSchema = SchemaFactory.createForClass(FiberProduction);
 
